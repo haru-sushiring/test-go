@@ -1,10 +1,11 @@
-varsion: "3.8"
+version: "3.8"
 
 services:
   app:
     build:
+      context: .
+    image: testgo-app
     ports:
       - "8080:8080"
-    volumes:
-      - .:/app
-      - /app/vendor
+    volumes: []
+    command: ["/app/main"]
